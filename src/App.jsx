@@ -1,21 +1,14 @@
 import React from 'react';
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import Projects from './Projects';
-import { CssBaseline, AppBar, Toolbar, Typography, Container } from '@mui/material';
+
+const theme = createTheme();
 
 const App = () => (
-  <div>
+  <ThemeProvider theme={theme}>
     <CssBaseline />
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6">
-          Organization Site
-        </Typography>
-      </Toolbar>
-    </AppBar>
-    <Container>
-      <Projects />
-    </Container>
-  </div>
+    <Projects />
+  </ThemeProvider>
 );
 
 export default App;
