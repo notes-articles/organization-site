@@ -19,16 +19,23 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: `${theme.spacing(3)} !important`,
   },
   searchInput: {
-    width: '50% !important',
+    width: '100% !important',
+    maxWidth: '400px !important',
     padding: `${theme.spacing(1)} !important`,
     fontSize: '1rem !important',
+    [theme.breakpoints.up('sm')]: {
+      width: '50% !important',
+    },
   },
   navButtons: {
     display: 'flex !important',
     justifyContent: 'center !important',
+    flexWrap: 'wrap !important', // Enable wrapping of buttons
     marginBottom: `${theme.spacing(4)} !important`,
     '& > *': {
       margin: `${theme.spacing(1)} !important`,
+      flex: '1 1 auto !important', // Allow buttons to grow and shrink as needed
+      minWidth: '120px !important', // Ensure minimum width for buttons
     },
   },
   button: {
